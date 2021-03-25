@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>angel of history</title>
+
+    <meta name="description" content="Hello, World! - A-Frame" />
+    <!--<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js">
+      <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js">
+    </script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <video id="video" autoplay muted playsinline></video>
+    
+    <a-scene vr-mode-ui="enabled: false">
+      
+      <!-- put your entities and other content in here (inside the scene tags!) -->
+
+      <!-- this text is going to be behind me -->
+      <a-entity
+        position="3 1.5 4"
+        text-geometry="value: a fire nearing its map"
+        material="src: https://cdn.glitch.com/02a3c026-d20f-49a0-abc8-2b1008cb8afb%2Fself-portrait-of-david-wojnarowicz_1983-85-2.jpg?v=1612204634910; repeat: 4 2"
+        rotation="0 180 0"
+        look-at="[camera]"
+      ></a-entity>
+      
+ <a-text color="red" position="0 2 -2" value="in front" align="center"> </a-text>
+      
+      <!-- <a-text position="0 2 2" rotation="0 180 0" value="in back" align="center"> </a-text> -->
+      
+      <!-- this text will be in front of me -->
+      <a-entity
+        position="-4 1.5 -4"
+        text-geometry="value: your flesh occupies; height:0.1; size: 0.8"
+        material="src: https://cdn.glitch.com/02a3c026-d20f-49a0-abc8-2b1008cb8afb%2Fself-portrait-of-david-wojnarowicz_1983-85-2.jpg?v=1612204634910; repeat: 4 2"
+        look-at="[camera]"
+      ></a-entity>
+
+    <a-entity
+        position="4 1 0"
+        rotation="60 200 0"
+        geometry="primitive: sphere; radius: 0.3"
+        material="src: https://cdn.glitch.com/02a3c026-d20f-49a0-abc8-2b1008cb8afb%2Fself-portrait-of-david-wojnarowicz_1983-85-2.jpg?v=1612204634910"
+      ></a-entity> 
+      
+    </a-scene>
+    
+  </body>
+</html>

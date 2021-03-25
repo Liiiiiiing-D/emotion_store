@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-assets>
+        <a-asset-item
+          id="apollo"
+          src="https://cdn.glitch.com/9e087527-1921-4944-8e54-17082e7420ab%2FTriceratops_horridus_Marsh_1889-150k-4096.glb?v=1615212095858"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-marker preset="kanji">
+        <a-entity
+          gltf-model="#apollo"
+          scale=".2 .2 .2"
+          rotation="0 -90 0"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

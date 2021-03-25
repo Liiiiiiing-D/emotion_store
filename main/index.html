@@ -1,16 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,inital-scale=1.0,minimum-scale=0.5,maximum-scale=2.0,user-scalable=no">
-    <title>main</title>
-</head>
-<body>
-    <div class="TopBar">
-        <h1>HOME</h1>
-       <a href="https://enormous-neat-lizard.glitch.me/"> <h1>MENU</h1></a>
-        <h1>ABOUT US</h1>
-        <h1>CONTACT</h1>
-    </div>
-</body>
+<html>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="kanji">
+        <video id="video" autoplay muted playsinline></video>
+
+        <!-- <a-scene vr-mode-ui="enabled: false"> -->
+        <!-- the scene begins here. Be sure to put your entities and other content in here (inside the scene tags!)  -->
+
+        <!-- this text is going to be in front of me -->
+        <a-text
+          value="Here is a take-out window, where you can buy the special food displayed in the menu."
+          color="#c3522c"
+          position="0 1 -1"
+          rotation="0 180 0"
+          scale="0.5 0.5 0.5"
+          align="center"
+        >
+        </a-text>
+
+        <!-- this text is going to be behind me -->
+        <a-text
+          value="This is the place to store magical herbs, you can submit special orders to us to customize your exclusive prescription"
+          color="#c3522c"
+          position="0 1 1"
+          rotation="0 0 0"
+          scale="0.5 0.5 0.5"
+          align="center"
+        >
+        </a-text>
+        <!--   <a-entity
+        position="2 2 4"
+        text-geometry="value: where a fire nears its map; size: 0.3"
+        material="src: https://cdn.glitch.com/02a3c026-d20f-49a0-abc8-2b1008cb8afb%2Fself-portrait-of-david-wojnarowicz_1983-85-2.jpg?v=1612204634910; repeat: 4 2"
+        rotation="0 180 0"
+       
+      ></a-entity>-->
+
+        <!-- this text is going to be on my right -->
+        <a-text
+          value=" Our exclusive products are sold here, and you can easily get popular emotional support products from here."
+          color="#c3522c"
+          position="1 1 0"
+          rotation="0 90 0"
+          scale="0.5 0.5 0.5"
+          align="center"
+        >
+        </a-text>
+
+        <!-- this text is going to be on my left -->
+        <!-- <a-text
+        value="& gone. So you take the knife to the wall instead. You carve & carve"
+        position="-4 2 0"
+        rotation="0 90 0"
+        align="center"
+      >
+      </a-text>
+      
+      <!-- this text is going to be above me -->
+
+        <a-entity
+          position="0 0.5 0.5"
+          text-geometry="value: WELCOME; height:0.1; size: 0.5"
+          material="src:Red.jpg; repeat: 4 2"
+          rotation="0 90 0"
+          scale="0.3 0.3 0.3"
+          look-at="[camera]"
+        ></a-entity>
+        ?
+
+        <!-- this text is going to be below me -->
+        <a-text
+          value="Here is my store."
+          color="#c3522c"
+          position="0 0 0"
+          rotation="-90 90 0"
+          align="center"
+        >
+        </a-text>
+
+        <!-- the scene ends here -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>

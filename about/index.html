@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="../index.html">HOME</a>
+        <a href="shop/index.html">Shop</a>
+        <a href="../menu/index.html">Menu</a>
+        <a href="../about/index.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+       
+      <div id="main">
+        <h2></h2>
+        <p></p>
+        <span style="font-size:30px;cursor:pointer;color: #c3522c;" onclick="openNav()">&#9776; </span>
+      </div>
+      
+    <script type="text/javascript">
+        /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+            document.getElementById("main").style.marginLeft = "300px";
+                document.body.style.backgroundColor = "#c8c3b3";
+            }
+            /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "#e1d8c4";
+            }
+        </script>
+    <div id="text">
+        <h1>About this Project</h1>
+    <p>This is an interactive miniature scene that combines 
+        augmented reality and Web interactive design.
+        With the popularization and development of neuroscience and psychology, people’s dependence on psychological drugs has gradually increased. Perhaps one day, medications aimed at emotions will become part of people’s daily lives. Through a specific formula, cigarettes, alcohol or snacks can get 
+        the corresponding emotional response. What’s interesting is that in ancient TCM theories, there have always been magical methods of emotional regulation. Some herbs and ingredients are also believed to have specific effects on people’s psychology and 
+        emotions.</p>
+        <p> So this small store in the style of a traditional Chinese pharmacy sells customized psychotropic drugs and other groceries. Visitors can view the menu 
+        and purchase goods through the store’s website. The robot salesperson in the store will make goods based on the orders received on the website.</p>
+    </div>
+</body>
+</html>
